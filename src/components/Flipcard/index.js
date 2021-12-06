@@ -1,9 +1,11 @@
 import React from 'react';
+import './Flipcard.css';
 
-const Flipcard = () => {
+const Flipcard = ({logo, name}) => {
     return (
-        <div>
-            <h1>Flipcard</h1>
+        <div className='flipcard'>
+            <img href={logo}/>
+            <h1>{name}</h1>
         </div>
     )
 };
