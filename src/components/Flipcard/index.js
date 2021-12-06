@@ -1,19 +1,25 @@
 import React, { useState } from 'react';
 import './Flipcard.css';
 
-const Flipcard = ({ name, phone, website }) => {
+const Flipcard = ({ name, alliance, phone, website }) => {
     const [flipped, setFlipped] = useState(false);
 
     let cardText;
     if (flipped === false) {
         cardText = <div>
-            <h1>{name}</h1>
-            </div>
+            <h1 className='airline_info name'>{name}</h1>
+        </div>
     } else {
         cardText = <div>
-            <h1>{name}</h1>
-            <h2>{phone}</h2>
-            <h2>{website}</h2>
+            <h1 className='airline_info name'>{name}</h1>
+            <h2 className='airline_info'>{
+                alliance === 'OW' ? 'Oneworld'
+                    : alliance === 'ST' ? 'Sky Team'
+                        : alliance === 'SA' ? 'Star Alliance'
+                            : ''
+            }</h2>
+            <h2 className='airline_info'>{phone}</h2>
+            <h2 className='airline_info site'>{website}</h2>
         </div>
     }
 
