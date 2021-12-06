@@ -1,35 +1,29 @@
+import React, { useState } from 'react';
+import Checkbox from '../Checkbox';
 import './Filter.css'
 
 const Filter = () => {
+
     return (
         <div className="FilterContainer">
             <h1 className="title">Airlines</h1>
             <h2 className="filter">Filter by Alliances</h2>
             <div className="optionsContainer">
-                <input
-                    id="checkbox1"
-                    name="oneWorld"
-                    type="checkbox"
+                <Checkbox
+                    id='checkbox1'
+                    name='oneworld'
+                    alliance='One World'
                 />
-                <label>
-                    Oneworld
-                </label>
-                <input
-                    id="checkbox2"
-                    name="skyTeam"
-                    type="checkbox"
+                <Checkbox
+                    id='checkbox2'
+                    name='skyTeam'
+                    alliance='Sky Team'
                 />
-                <label>
-                    Sky Team
-                </label>
-                <input
+                <Checkbox
                     id="checkbox3"
                     name="starAlliance"
-                    type="checkbox"
+                    alliance='Star Alliance'
                 />
-                <label>
-                    Star Alliance
-                </label>
             </div>
         </div>
     )

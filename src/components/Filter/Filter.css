@@ -24,17 +24,8 @@ h2 {
     margin-left: 94px;
 }
 
-#checkbox1 {
+.optionsContainer {
+    display: flex;
+    flex-direction: row;
     margin-left: 94px;
-    margin-bottom: 56px;
-}
-
-#checkbox2 {
-    margin-left: 24px;
-    margin-bottom: 56px;
-}
-
-#checkbox3 {
-    margin-left: 20px;
-    margin-bottom: 56px;
 }
