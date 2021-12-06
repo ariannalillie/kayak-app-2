@@ -1,6 +1,6 @@
 import './Filter.css'
 
-function Filter() {
+const Filter = () => {
     return (
         <div className="FilterContainer">
             <h1 className="title">Airlines</h1>

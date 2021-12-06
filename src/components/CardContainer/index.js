@@ -9,6 +9,7 @@ const CardContainer = () => {
             <Flipcard
             key={index}
             name={airline.name}
+            logo={airline.logoURL}
             alliance={airline.alliance}
             phone={airline.phone}
             website={airline.site}

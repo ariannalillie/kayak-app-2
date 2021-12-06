@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import './Flipcard.css';
 
-const Flipcard = ({ name, alliance, phone, website }) => {
+const Flipcard = ({ logo, name, alliance, phone, website }) => {
     const [flipped, setFlipped] = useState(false);
 
     let cardText;
     if (flipped === false) {
         cardText = <div>
+              <img src={`https://www.kayak.com/${logo}`}/>
             <h1 className='airline_info name'>{name}</h1>
         </div>
     } else {
