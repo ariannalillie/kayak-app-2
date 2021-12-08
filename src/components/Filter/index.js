@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Checkbox from '../Checkbox';
 import './Filter.css'
 
-const Filter = () => {
+const Filter = ({ setDisplayedAirlines, setFiltersActive }) => {
 
     return (
         <div className="FilterContainer">
@@ -10,18 +10,24 @@ const Filter = () => {
             <h2 className="filter">Filter by Alliances</h2>
             <div className="optionsContainer">
                 <Checkbox
+                    setDisplayedAirlines={setDisplayedAirlines}
+                    setFiltersActive={setFiltersActive}
                     id='checkbox1'
-                    name='oneworld'
+                    name='OW'
                     alliance='One World'
                 />
                 <Checkbox
+                    setDisplayedAirlines={setDisplayedAirlines}
+                    setFiltersActive={setFiltersActive}
                     id='checkbox2'
-                    name='skyTeam'
+                    name='ST'
                     alliance='Sky Team'
                 />
                 <Checkbox
+                    setDisplayedAirlines={setDisplayedAirlines}
+                    setFiltersActive={setFiltersActive}
                     id="checkbox3"
-                    name="starAlliance"
+                    name="SA"
                     alliance='Star Alliance'
                 />
             </div>

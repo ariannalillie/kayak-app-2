@@ -1,13 +1,11 @@
-import CardContainer from "./components/CardContainer";
+import AirlinePage from "./components/AirlinePage";
 import Header from "./components/Header";
-import Filter from "./components/Filter"
 
 function App() {
   return (
     <div>
       <Header />
-      <Filter />
-      <CardContainer />
+      <AirlinePage />
     </div>
   );
 }

@@ -3,8 +3,12 @@ import Flipcard from "../Flipcard";
 import data from '../../data/airlines.json';
 import './CardContainer.css';
 
-const CardContainer = () => {
-    const airlineCard = data.airlines.map((airline, index) => {
+const CardContainer = ({ displayedAirlines, filtersActive }) => {
+    const airlineData = data.airlines;
+
+    const filteredAirlines = filtersActive ? airlineData.filter((el) => displayedAirlines[el.alliance]) : airlineData;
+
+    const airlineCard = filteredAirlines.map((airline, index) => {
         return (
             <Flipcard
             key={index}
