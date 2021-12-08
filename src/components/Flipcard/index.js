@@ -7,7 +7,7 @@ const Flipcard = ({ logo, name, alliance, phone, website }) => {
     let cardText;
     if (flipped === false) {
         cardText = <div>
-              <img src={`https://www.kayak.com/${logo}`}/>
+              <img src={`https://www.kayak.com/${logo}`} alt='airline logo'/>
             <h1 className='airline_info name'>{name}</h1>
         </div>
     } else {
@@ -20,7 +20,7 @@ const Flipcard = ({ logo, name, alliance, phone, website }) => {
                             : ''
             }</h2>
             <h2 className='airline_info'>{phone}</h2>
-            <h2 className='airline_info site'>{website}</h2>
+            <a className='airline_info site' href={website}>{website}</a>
         </div>
     }
 
